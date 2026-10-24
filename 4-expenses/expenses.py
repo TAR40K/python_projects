@@ -4,7 +4,8 @@ def main():
     average_expense = sum_expense / len(expenses_list)
     min_expense = min(expenses_list)
     max_expense = max(expenses_list)
-    expenses_tuple = (sum_expense, min_expense, max_expense)
+    expenses_tuple = (min_expense, max_expense, sum_expense)
+    print(f"Среднее: {average_expense:.2f}")
     print(expenses_tuple)
 
 
