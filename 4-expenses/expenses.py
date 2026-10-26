@@ -5,7 +5,7 @@ def main():
     KOP_WORDS = {"коп", "копейка", "копейки", "копеек"}
     if len(el_of_string) == 4:
         num_rub, txt_rub, num_kop, txt_kop = el_of_string
-        if not txt_rub in RUB_WORDS and not txt_kop in KOP_WORDS:
+        if not txt_rub in RUB_WORDS or not txt_kop in KOP_WORDS:
             print("Некорректный формат суммы")
         else:
             try:
@@ -31,7 +31,7 @@ def main():
                 print("Некорректный формат суммы")
             else:
                 num_rub = int(num_rub)
-                print(f"{num_rub} ₽")
+                print(f"{num_rub}.{0:02d} ₽")
     else:
         print("Некорректный формат суммы")
 
