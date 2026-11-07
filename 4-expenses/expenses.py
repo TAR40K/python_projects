@@ -6,29 +6,23 @@ def main():
         "удалить расход по номеру",
         "выход",
     )
-    menu_input = input(
+    MENU_TEXT = (
         "- Добавить расход\n"
-        "- Показать всех расходы\n"
+        "- Показать все расходы\n"
         "- Показать сумму и средний расход\n"
         "- Удалить расход по номеру\n"
         "- Выход\n"
-    ).lower()
+    )
 
-    for comand in COMANDS:
-        while menu_input not in COMANDS:
-            print("\nВведенная команда отсутствует. Попробуйте еще раз\n")
-            menu_input = str(
-                input(
-                    "- Добавить расход\n"
-                    "- Показать всех расходы\n"
-                    "- Показать сумму и средний расход\n"
-                    "- Удалить расход по номеру\n"
-                    "- Выход\n"
-                )
-            ).lower()
-        if comand == "выход":
+    while True:
+        menu_input = input(MENU_TEXT).lower().strip()
+        if menu_input == "выход":
             print("\nВсего доброго!\n")
             break
+        elif menu_input in COMANDS:
+            print("\nФункция пока в разработке\n")
+        else:
+            print("\nВведенная команда отсутствует. Попробуйте еще раз\n")
 
 
 if __name__ == "__main__":
